@@ -23,5 +23,9 @@ module JobSearchTracker
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # Set default locale to Swedish
+    config.i18n.default_locale = :sv
+    config.i18n.available_locales = [ :sv, :en ]
   end
 end

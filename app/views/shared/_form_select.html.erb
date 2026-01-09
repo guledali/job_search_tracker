@@ -1,0 +1,16 @@
+<%# Static mock form select %>
+<div>
+  <label for="status" class="form-label">
+    Status <span class="text-red-500">*</span>
+  </label>
+  <select 
+    id="status" 
+    name="job[status]" 
+    required
+    class="form-select">
+    <option value="waiting">Waiting</option>
+    <option value="applied">Applied</option>
+    <option value="interviewing">Interviewing</option>
+    <option value="rejected">Rejected</option>
+  </select>
+</div>

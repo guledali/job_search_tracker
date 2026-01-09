@@ -28,4 +28,33 @@
 #       enabled: "ON"
 
 en:
-  hello: "Hello world"
+  job_applications:
+    title: "Job Applications"
+    subtitle: "Track and manage your job search applications"
+    total_applications: "Total Applications"
+    waiting: "Pending"
+    applied: "Applied"
+    interviewing: "Interviewing"
+    rejected: "Rejected"
+    source: "Source"
+    status: "Status"
+    all_sources: "All Sources"
+    all_status: "All Status"
+    add_application: "Add Application"
+    applied_ago: "Applied %{time} ago"
+    edit: "Edit"
+    delete: "Delete"
+    create_success: "Application created successfully!"
+    new_application: "New Application"
+    back_to_applications: "Back to Applications"
+    save_application: "Save Application"
+  status:
+    applied: "Applied"
+    interviewing: "Interviewing"
+    waiting: "Pending"
+    rejected: "Rejected"
+  date:
+    formats:
+      default: "%Y-%m-%d"
+      long: "%B %d, %Y"
+      short: "%b %d"

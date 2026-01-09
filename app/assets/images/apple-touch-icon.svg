@@ -1,0 +1,12 @@
+<svg width="192" height="192" viewBox="0 0 192 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="96" cy="96" r="96" fill="#3B82F6"/>
+  
+  <!-- Briefcase icon -->
+  <path d="M48 72V60C48 53.3726 53.3726 48 60 48H132C138.627 48 144 53.3726 144 60V72M48 72V120C48 126.627 53.3726 132 60 132H132C138.627 132 144 126.627 144 120V72M48 72H144M72 48V36C72 32.6863 74.6863 30 78 30H114C117.314 30 120 32.6863 120 36V48" stroke="white" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Small accent dots -->
+  <circle cx="60" cy="96" r="6" fill="white" opacity="0.8"/>
+  <circle cx="96" cy="96" r="6" fill="white" opacity="0.8"/>
+  <circle cx="132" cy="96" r="6" fill="white" opacity="0.8"/>
+</svg>

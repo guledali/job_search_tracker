@@ -1,0 +1,31 @@
+sv:
+  job_applications:
+    title: "Jobbansökningar"
+    subtitle: "Följ och hantera dina jobbsökningar"
+    total_applications: "Totalt antal ansökningar"
+    waiting: "Väntar"
+    applied: "Ansökt"
+    interviewing: "Intervju"
+    rejected: "Avböjd"
+    source: "Källa"
+    status: "Status"
+    all_sources: "Alla källor"
+    all_status: "Alla status"
+    add_application: "Lägg till ansökan"
+    applied_ago: "Ansökte för %{time} sedan"
+    edit: "Redigera"
+    delete: "Ta bort"
+    create_success: "Ansökan har skapats framgångsrikt!"
+    new_application: "Ny Ansökan"
+    back_to_applications: "Tillbaka till ansökningar"
+    save_application: "Spara ansökan"
+  status:
+    applied: "Ansökt"
+    interviewing: "Intervju"
+    waiting: "Väntar"
+    rejected: "Avböjd"
+  date:
+    formats:
+      default: "%Y-%m-%d"
+      long: "%B %d, %Y"
+      short: "%b %d"

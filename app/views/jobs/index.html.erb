@@ -1,0 +1,91 @@
+<% content_for :title, t("job_applications.title") %>
+
+<div class="w-full">
+  <!-- Header -->
+  <div class="mb-8">
+    <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-2"><%= t("job_applications.title") %></h1>
+    <p class="text-gray-600 dark:text-gray-300"><%= t("job_applications.subtitle") %></p>
+  </div>
+
+  <!-- Stats Cards -->
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
+    <div class="card-stat">
+      <%= render 'shared/stat_card' %>
+    </div>
+
+    <div class="card-stat">
+      <div class="flex items-center">
+        <div class="icon-stat icon-yellow">
+          <svg class="w-6 h-6 text-yellow-600 dark:text-yellow-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+        </div>
+        <div class="ml-4">
+          <p class="text-sm font-medium text-gray-600 dark:text-gray-400">Waiting</p>
+          <p class="text-2xl font-semibold text-gray-900 dark:text-white">8</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-stat">
+      <div class="flex items-center">
+        <div class="icon-stat icon-green">
+          <svg class="w-6 h-6 text-green-600 dark:text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+        </div>
+        <div class="ml-4">
+          <p class="text-sm font-medium text-gray-600 dark:text-gray-400">Applied</p>
+          <p class="text-2xl font-semibold text-gray-900 dark:text-white">12</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-stat">
+      <div class="flex items-center">
+        <div class="icon-stat icon-purple">
+          <svg class="w-6 h-6 text-purple-600 dark:text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+          </svg>
+        </div>
+        <div class="ml-4">
+          <p class="text-sm font-medium text-gray-600 dark:text-gray-400">Interviewing</p>
+          <p class="text-2xl font-semibold text-gray-900 dark:text-white">4</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Filter and Sort -->
+  <div class="card p-4 mb-6">
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+      <div class="flex items-center space-x-4 mb-4 sm:mb-0">
+        <div class="flex items-center space-x-2">
+          <label for="source-filter" class="form-label mb-0"><%= t("job_applications.source") %>:</label>
+          <select id="source-filter" class="form-select text-sm">
+            <option><%= t("job_applications.all_sources") %></option>
+            <option>LinkedIn</option>
+            <option>Indeed</option>
+          </select>
+        </div>
+        <div class="flex items-center space-x-2">
+          <label for="status-filter" class="form-label mb-0"><%= t("job_applications.status") %>:</label>
+          <select id="status-filter" class="form-select text-sm">
+            <option><%= t("job_applications.all_status") %></option>
+            <option><%= t("status.applied") %></option>
+            <option><%= t("status.interviewing") %></option>
+            <option><%= t("status.waiting") %></option>
+          </select>
+        </div>
+      </div>
+      <%= render 'shared/add_job_button' %>
+    </div>
+  </div>
+
+  <!-- Job Listings -->
+  <div class="space-y-4">
+    <%= render 'shared/job_card' %>
+    <%= render 'shared/job_card' %>
+    <%= render 'shared/job_card' %>
+  </div>
+</div>

@@ -108,11 +108,47 @@ config/
 
 ### Contributing
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Run tests and linting
-5. Submit a pull request
+#### Git Workflow
+
+This project follows a feature branch workflow to maintain code quality and prevent direct pushes to main:
+
+1. **Create a feature branch** from main:
+   ```bash
+   git checkout main
+   git pull origin main
+   git checkout -b feature/descriptive-name
+   ```
+
+2. **Make your changes** on the feature branch
+
+3. **Test your changes**:
+   ```bash
+   bundle exec rspec  # Run tests
+   bundle exec rubocop  # Run linting
+   ```
+
+4. **Push your branch**:
+   ```bash
+   git push origin feature/descriptive-name
+   ```
+
+5. **Create a Pull Request** through GitHub
+   - Title should be descriptive (e.g., "Fix broken controller tests")
+   - Include description of changes
+   - Ensure CI passes
+
+6. **Merge** via GitHub pull request (squash merge preferred)
+
+#### Branch Naming Conventions
+- `feature/feature-name` - New features
+- `fix/bug-description` - Bug fixes
+- `refactor/component-name` - Code refactoring
+- `docs/update-type` - Documentation changes
+
+#### Branch Protection
+- Main branch is protected and requires pull requests
+- All changes must be reviewed and approved
+- CI checks must pass before merging
 
 ---
 
@@ -212,11 +248,47 @@ config/
 
 ### Bidra
 
-1. Forka repot
-2. Skapa en feature branch
-3. Gör dina ändringar
-4. Kör tester och linting
-5. Skicka en pull request
+#### Git Workflow
+
+Detta projekt följer en feature branch-arbetsflöde för att upprätthålla kodkvalitet och förhindra direkta pushar till main:
+
+1. **Skapa en feature branch** från main:
+   ```bash
+   git checkout main
+   git pull origin main
+   git checkout -b feature/beskrivande-namn
+   ```
+
+2. **Gör dina ändringar** på feature branchen
+
+3. **Testa dina ändringar**:
+   ```bash
+   bundle exec rspec  # Kör tester
+   bundle exec rubocop  # Kör linting
+   ```
+
+4. **Pusha din branch**:
+   ```bash
+   git push origin feature/beskrivande-namn
+   ```
+
+5. **Skapa en Pull Request** via GitHub
+   - Titeln ska vara beskrivande (t.ex., "Fix broken controller tests")
+   - Inkludera beskrivning av ändringar
+   - Säkerställ att CI passerar
+
+6. **Merge** via GitHub pull request (squash merge föredras)
+
+#### Branch-namnkonventioner
+- `feature/feature-namn` - Nya features
+- `fix/bug-beskrivning` - Bug fixes
+- `refactor/komponent-namn` - Kodrefaktorering
+- `docs/update-typ` - Dokumentationsändringar
+
+#### Branch-skydd
+- Main branchen är skyddad och kräver pull requests
+- Alla ändringar måste granskas och godkännas
+- CI-checkar måste passera innan merge
 
 ---
 

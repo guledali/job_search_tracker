@@ -1,7 +1,37 @@
 require "application_system_test_case"
 
 class CollapsiblesTest < ApplicationSystemTestCase
-  test "should collapse when clicking icon" do
-    assert true
+  def setup
+    visit new_job_path
+  end
+
+  test "collapsible toggles correctly" do
+    toggle = find("[data-collapsible-target='toggle']", visible: true, wait: 5)
+    content = find("[data-collapsible-target='content']", visible: true, wait: 5)
+    icon = find("[data-collapsible-target='toggleIcon']", visible: true, wait: 5)
+
+    assert toggle["aria-expanded"] == "true"
+    assert_not content[:class].include?("hidden")
+    assert_not icon[:class].include?("rotate-180")
+
+    toggle.click
+
+    assert toggle["aria-expanded"] == "false"
+    assert content[:class].include?("hidden")
+    assert icon[:class].include?("rotate-180")
+  end
+
+  test "form fields hide and show correctly" do
+    toggle = find("[data-collapsible-target='toggle']", visible: true, wait: 5)
+
+    assert find("#description", visible: true)
+
+    toggle.click
+
+    assert find("#description", visible: false)
+
+    toggle.click
+
+    assert find("#description", visible: true)
   end
 end

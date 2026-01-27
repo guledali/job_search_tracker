@@ -6,3 +6,19 @@ inherit_gem: { rubocop-rails-omakase: rubocop.yml }
 # # Use `[a, [b, c]]` not `[ a, [ b, c ] ]`
 # Layout/SpaceInsideArrayLiteralBrackets:
 #   Enabled: false
+
+
+# Enable indentation auto-fix
+Layout/IndentationWidth:
+  Enabled: true
+  Width: 2 # standard 2-space indentation for Ruby
+
+# Align end with matching keyword
+Layout/EndAlignment:
+  Enabled: true
+  EnforcedStyleAlignWith: keyword # align 'end' with the def/if/etc keyword
+
+# Make sure spacing style is correct (spaces, not tabs)
+Layout/IndentationStyle:
+  Enabled: true
+  EnforcedStyle: spaces

@@ -203,18 +203,16 @@
       </div>
       <!-- Separator -->
       <div class="border-t border-gray-200 dark:border-gray-700 pt-6"></div>
-      <!-- Additional Information Section -->
-      <!-- TODO: Implement JavaScript in collapsible_controller.js:
-           1. Toggle collapsed state in toggle() method
-           2. Add hidden/block classes to content target
-           3. Rotate chevron icon (add rotate-180 class when expanded)
-           4. Update aria-expanded attribute on toggle button -->
       <div data-controller="collapsible" class="space-y-4">
-        <button 
+        <button
           type="button"
           data-collapsible-target="toggle"
           data-action="click->collapsible#toggle"
-          class="section-header w-full text-left flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-800 p-2 rounded-lg transition-colors duration-200"
+          class="
+            section-header w-full text-left flex items-center justify-between
+            hover:bg-gray-50 dark:hover:bg-gray-800 p-2 rounded-lg transition-colors
+            duration-200
+          "
           aria-expanded="true"
         >
           <div class="flex items-center">
@@ -233,18 +231,28 @@
             </svg>
             Ytterligare information
           </div>
-          <svg 
-            data-collapsible-target="toggleIcon" 
-            class="w-5 h-5 text-gray-500 transform transition-transform duration-200" 
-            fill="none" 
-            stroke="currentColor" 
+          <svg
+            data-collapsible-target="toggleIcon"
+            class="
+              w-5 h-5 text-gray-500 transform transition-transform duration-200
+            "
+            fill="none"
+            stroke="currentColor"
             viewBox="0 0 24 24"
           >
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            ></path>
           </svg>
         </button>
 
-        <div data-collapsible-target="content" class="space-y-4 transition-all duration-300 ease-in-out">
+        <div
+          data-collapsible-target="content"
+          class="space-y-4 transition-all duration-300 ease-in-out"
+        >
           <div>
             <label for="description" class="form-label">
               Jobbeskrivning

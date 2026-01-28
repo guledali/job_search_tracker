@@ -11,14 +11,14 @@ class CollapsiblesTest < ApplicationSystemTestCase
     icon = find("[data-collapsible-target='toggleIcon']", visible: true, wait: 5)
 
     assert toggle["aria-expanded"] == "true"
+    assert icon[:class].include?("rotate-180")
     assert_not content[:class].include?("hidden")
-    assert_not icon[:class].include?("rotate-180")
 
     toggle.click
 
     assert toggle["aria-expanded"] == "false"
+    assert_not icon[:class].include?("rotate-180")
     assert content[:class].include?("hidden")
-    assert icon[:class].include?("rotate-180")
   end
 
   test "form fields hide and show correctly" do

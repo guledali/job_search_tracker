@@ -7,6 +7,7 @@ module.exports = {
     './app/javascript/**/*.js',
     './config/initializers/**/*.rb'
   ],
+  darkMode: 'class',
   theme: {
     extend: {},
   },

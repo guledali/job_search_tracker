@@ -45,7 +45,7 @@ class ThemesTest < ApplicationSystemTestCase
     end
 
     def toggle_theme
-      find("[data-theme-target='toggle']").click
+      find("[data-test='toggle-theme']").click
     end
 
     def reload_page
